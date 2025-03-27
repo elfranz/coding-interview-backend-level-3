@@ -1,4 +1,3 @@
-//TODO: IMPROVE ERROR HANDLING
 import { Item } from '@prisma/client';
 import prisma from '../database';
 
@@ -34,6 +33,7 @@ export async function create(data: ItemInput): Promise<Item> {
     }
 }
 
+// im not adding this as a transaction since the update is being performed in one operation
 export async function update(id: number, data: Partial<ItemInput>): Promise<Item>{
     try {
         return await prisma.item.update({where: {id: Number(id)}, data: data})

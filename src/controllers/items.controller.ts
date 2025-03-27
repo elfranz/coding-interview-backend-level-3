@@ -1,4 +1,3 @@
-//TODO: IMPROVE ERROR HANDLING
 import { Request, ResponseToolkit } from '@hapi/hapi';
 import * as service from '../services/items.service'
 import { itemPayloadSchema, itemUpdatePayloadSchema } from '../validators/items.validators';
@@ -42,12 +41,6 @@ export async function update(request: Request, h: ResponseToolkit) {
             message: detail.message
         }))
         return h.response({ errors }).code(400);
-    }
-    const existingItem = await service.get(id);
-    if (!existingItem) {
-        return h.response({
-            message: 'Item not found'
-        }).code(404);
     }
     const item = await service.update(id, value)
     return h.response(item).code(200)

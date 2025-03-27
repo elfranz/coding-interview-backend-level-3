@@ -203,7 +203,7 @@ describe('E2E Tests', () => {
                     price: 10
                 }
             })
-            console.log(createdItem!.id)
+
             expect(createdItem).toBeDefined()
 
             const response = await server.inject({

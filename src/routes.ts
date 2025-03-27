@@ -22,7 +22,7 @@ export const defineRoutes = (server: Server) => {
     })
 
     server.route({
-        method: 'PATCH',
+        method: 'PUT',
         path: '/items/{id}',
         handler: itemsController.update
     })
