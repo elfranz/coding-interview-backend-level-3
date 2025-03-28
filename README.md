@@ -21,7 +21,8 @@ Soy el Senior Developer de mi equipo en El Dorado, y me dieron la responsabilida
 1. npm install
 2. generar archivos .env y .env.test, sin estos no vas a poder hacer pruebas locales.()
 3. docker-compose up -d (para levantar base de datos)
-4. npm run start para levantar el server
+4. npx prisma migrate dev
+4. npm run start
 5. Ahora podés invocar los endpoints siguiendo la especificación en la documentación de Postman
 
 ## POSTMAN DOCS
