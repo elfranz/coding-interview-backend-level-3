@@ -1,7 +1,7 @@
 # Bienvenido al coding-interview-backend-level-3 - Parte I
 
 ## Descripción
-Eres el Senior Developer de tu equipo en El Dorado, y te han dado la responsabilidad de desarrollar un nuevo feature que nos pide el equipo de producto:
+Soy el Senior Developer de mi equipo en El Dorado, y me dieron la responsabilidad de desarrollar un nuevo feature que nos pide el equipo de producto:
 
 > API REST que permita realizar operaciones CRUD sobre una entidad de tipo `Item`.
 >
@@ -9,35 +9,22 @@ Eres el Senior Developer de tu equipo en El Dorado, y te han dado la responsabil
 >
 >
 
-# Requisitos:
-- Si el servicio se reinicia, los datos no se pueden perder.
-- Tienes que implementar tu codigo como si estuvieses haciendo un servicio para El Dorado listo para produccion.
-- Completar la implementación de toda la funcionalidad de forma tal de que los tests e2e pasen exitosamente.
+# Tecnologías Utilizadas:
+- Typescript
+    - Hapi como framework de desarrollo web
+    - Prisma como ORM
+    - Jest
+- PostgreSQL
+- Docker
 
+## Pasos para comenzar a desarrollar localmente
+1. npm install
+2. generar archivos .env y .env.test, sin estos no vas a poder hacer pruebas locales.()
+3. docker-compose up -d (para levantar base de datos)
+4. npm run start para levantar el server
+5. Ahora podés invocar los endpoints siguiendo la especificación en la documentación de Postman
 
-### Que puedes hacer: 
-- ✅ Modificar el código fuente y agregar nuevas clases, métodos, campos, etc.
-- ✅ Cambiar dependencias, agregar nuevas, etc.
-- ✅ Modificar la estructura del proyecto (/src/** es todo tuyo)
-- ✅ Elegir una base de datos
-- ✅ Elegir un framework web
-- ✅ Crear tests
-- ✅ Cambiar la definición del .devContainer
+## POSTMAN DOCS
+> https://documenter.getpostman.com/view/11207309/2sB2cPhjoX
 
-
-### Que **no** puedes hacer:
-- ❌ No puedes modificar el archivo original /e2e/index.test.ts (pero puedes crear otros test si lo deseas)
-- ❌ El proyecto debe usar Typescript 
-- ❌ Estresarte 🤗
-
-
-## Pasos para comenzar
-1. Haz un fork usando este repositorio como template
-2. Clona el repositorio en tu máquina
-3. Realiza los cambios necesarios para que los tests pasen
-4. Sube tus cambios a tu repositorio
-5. Avísanos que has terminado
-6. ???
-7. PROFIT
-
-### Cualquier duda contactarme a https://www.linkedin.com/in/andreujuan/
+### Cualquier duda contactarme a https://www.linkedin.com/in/francisco-gomez-tarr%C3%ADo-8678a26b/
