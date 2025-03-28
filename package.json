@@ -5,7 +5,8 @@
   "main": "src/index.ts",
   "scripts": {
     "start": "tsx src/index.ts",
-    "test": "dotenv -e .env.test -- npx prisma migrate reset --force && dotenv -e .env.test -- jest e2e --runInBand",
+    "test:e2e": "dotenv -e .env.test -- npx prisma migrate reset --force && dotenv -e .env.test -- jest e2e --runInBand",
+    "test:unit": "jest --silent --testPathPattern=tests",
     "test:reset": "dotenv -e .env.test -- npx prisma migrate reset --force"
   },
   "author": "El Dorado Dev Team",
@@ -23,6 +24,7 @@
     "typescript": "^5.8.2"
   },
   "dependencies": {
+    "@hapi/boom": "^10.0.1",
     "@hapi/hapi": "^21.3.10",
     "@prisma/client": "^6.5.0",
     "dotenv": "^16.4.7",

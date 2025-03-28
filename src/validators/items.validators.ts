@@ -34,18 +34,3 @@ export const itemUpdatePayloadSchema = Joi.object({
 }).or('name', 'price').messages({
         'object.missing': 'Must provide at least one field to update'
 }).options({ abortEarly: false });
-
-export function handleValidationError(request: Request, h: ResponseToolkit, err: any) {
-    if (err?.isJoi && Array.isArray(err.details)) {
-        const errors = err.details.map((detail: Joi.ValidationErrorItem) => ({
-            field: detail.context?.key || 'unknown',
-            message: detail.message
-        }));
-
-        return h.response({ errors }).code(400).takeover();
-    }
-
-    return h.response({ 
-        errors: [{ field: 'unknown', message: 'An unexpected error occurred' }]
-    }).code(500).takeover();
-}
