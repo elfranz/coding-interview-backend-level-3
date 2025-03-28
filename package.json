@@ -5,6 +5,7 @@
   "main": "src/index.ts",
   "scripts": {
     "start": "tsx src/index.ts",
+    "test": "NODE_ENV=test jest e2e",
     "test:e2e": "dotenv -e .env.test -- npx prisma migrate reset --force && dotenv -e .env.test -- jest e2e --runInBand",
     "test:unit": "jest --silent --testPathPattern=tests",
     "test:reset": "dotenv -e .env.test -- npx prisma migrate reset --force"

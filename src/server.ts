@@ -1,5 +1,6 @@
 import Hapi from '@hapi/hapi'
 import { defineRoutes } from './routes'
+import prisma from './database';
 
 const getServer = () => {
     const server = Hapi.server({
@@ -34,9 +35,15 @@ const getServer = () => {
 }
 
 export const initializeServer = async () => {
-    const server = getServer()
-    await server.initialize()
-    return server
+    const server = getServer();
+  
+    if (process.env.NODE_ENV === 'test') {
+        // Reset mock database between tests
+        await prisma.item.deleteMany();
+    }
+
+    await server.initialize();
+    return server;
 }
 
 export const startServer = async () => {
