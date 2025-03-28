@@ -19,11 +19,13 @@ Soy el Senior Developer de mi equipo en El Dorado, y me dieron la responsabilida
 
 ## Pasos para comenzar a desarrollar localmente
 1. npm install
-2. generar archivos .env y .env.test, sin estos no vas a poder hacer pruebas locales.()
+2. generar archivo .env, sin estos no vas a poder hacer pruebas locales.
 3. docker-compose up -d (para levantar base de datos)
 4. npx prisma migrate dev
-4. npm run start
-5. Ahora podés invocar los endpoints siguiendo la especificación en la documentación de Postman
+5. npm run start
+6. Ahora podés invocar los endpoints siguiendo la especificación en la documentación de Postman
+7. npm run test:e2e
+8. npm run test:unit
 
 ## POSTMAN DOCS
 > https://documenter.getpostman.com/view/11207309/2sB2cPhjoX

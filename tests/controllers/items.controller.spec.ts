@@ -2,7 +2,7 @@ import { Request } from '@hapi/hapi';
 import * as controller from '../../src/controllers/items.controller';
 import * as service from '../../src/services/items.service';
 import * as Boom from '@hapi/boom';
-import { ValidationErrorItem } from 'joi';
+// import { ValidationErrorItem } from 'joi';
 
 jest.mock('../../src/services/items.service', () => ({
     getAll: jest.fn(),
